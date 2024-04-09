@@ -1,3 +1,3 @@
 
 idk how to use github.<br>
-![Steam Screenshot](https://steamuserimages-a.akamaihd.net/ugc/52121297107061768/19BEEBB3341BA97105B05937F3E706981EEBE8B8/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false)
+![cat](https://www.google.com/url?sa=i&url=https%3A%2F%2Fknowyourmeme.com%2Fphotos%2F2486154-maxwell-the-cat-spinning-cat&psig=AOvVaw3N1G9ntIQtWx7Ya3pIvcXj&ust=1712708913756000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKigvoXws4UDFQAAAAAdAAAAABAp)

@@ -1,3 +1,4 @@
 
 idk how to use github.<br>
-![cat](https://i.kym-cdn.com/photos/images/original/002/486/154/c06.gif)
+![cat](https://media.tenor.com/lCKwsD2OW1kAAAAi/happy-cat-happy-happy-cat.gif)
+

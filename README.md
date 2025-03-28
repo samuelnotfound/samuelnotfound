@@ -4,7 +4,7 @@ I have no background in coding, I initially made this account just to share some
 
 
 
-- [**Rive:** RadTech skeleton character](https://unitedastronomer.github.io/rive-skeleton/)
+- [**Rive:** Skeleton character](https://unitedastronomer.github.io/rive-skeleton/)
 
 #
 

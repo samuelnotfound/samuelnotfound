@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=15&duration=2000&pause=10000&color=F7F7F7&center=true&vCenter=true&width=435&lines=Hey+there%2C+I'm+Sam!+<3)](https://git.io/typing-svg)
+# [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=15&duration=2000&pause=10000&color=F7F7F7&background=090C11&center=true&vCenter=true&width=435&lines=Hey+there%2C+I'm+Sam!+%3C3)](https://git.io/typing-svg)
 
 I have no background in coding, I initially made this account just to share some Hackintosh [related help](https://github.com/unitedastronomer/miscellaneous-hackintosh-guides), and [config](https://github.com/unitedastronomer/E1-572G-Hackintosh). I recently started learning how to create Rive animations, so now I'm here just to host my work through GitHub Pages!
 

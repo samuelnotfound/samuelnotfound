@@ -2,7 +2,7 @@
 
 
 
-I’m a Radiologic Technology student with a passion for creativity and tech. 
+I’m a Radiologic Technology student-intern with a passion for creativity and tech. 
 
 
 I originally created this account to share Hackintosh-related resources. Now, I’m learning to create interactive animations and basic coding to bring motion designs to life using Rive.

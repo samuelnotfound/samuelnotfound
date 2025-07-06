@@ -1,8 +1,11 @@
 name: Build Readme
 
 on:
-  schedule: # execute every 24 hours
+  schedule:
     - cron: "0 1 * * *"
+  push:       
+    branches:
+      - main 
 
 jobs:
   build:

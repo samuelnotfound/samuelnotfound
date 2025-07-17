@@ -3,8 +3,9 @@
 
 I’m a Radiologic Technology student-intern with a passion for creativity and tech. 
 
+I originally created this account to share Hackintosh-related resources. Over time, with my previous experiences of doing motion graphics as a hobby, my interests expanded into interactive animation through Rive — now forced to learn coding to integrate, and make them load to share them here.
 
-I originally created this account to share Hackintosh-related resources. Now, I’m learning to create interactive animations and basic coding to bring motion designs to life using Rive.
+improve ,, i hate how random or unconnected "— sharing my creations here." 
 
 - [**Rive:** RadTech Skeleton Character](https://unitedastronomer.github.io/rive-skeleton/)
 

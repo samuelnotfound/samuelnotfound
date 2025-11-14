@@ -2,7 +2,7 @@
 
 i'm a radiologic technology student-intern. i create interactive animations on rive whenever i feel like. 
 
-- **rive:** [radtech skeleton](https://samuelnotfound.github.io/rive-skeleton/)
+- **rive:** [interactive radtech skeleton](https://samuelnotfound.github.io/rive-skeleton/)
 
 some hackintosh related stuff:
 - improved [ACPI USB Mapping Guide](https://github.com/5T33Z0/OC-Little-Translated/blob/main/Content/03_USB_Fixes/ACPI_Mapping_USB_Ports/XHUB_Method/README.md) based on my [original guide](https://github.com/samuelnotfound/miscellaneous-hackintosh-guides/blob/main/SSDT_USB_Mapping/README.md).

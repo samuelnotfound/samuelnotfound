@@ -61,6 +61,7 @@ header h1 {
     text-align: left !important;
 }
 
+/* Rive Button Styling (Kept original list item style) */
 .rive-bullet-wrapper {
   list-style: none;
   padding: 0;
@@ -109,7 +110,6 @@ header h1 {
     color: var(--link-hover-color);
 }
 
-
 .rive-arrow-icon {
   width: 0.8em; 
   height: 0.8em;
@@ -130,7 +130,6 @@ header h1 {
 .rive-bullet-wrapper li:hover .rive-arrow-icon {
     stroke: var(--link-hover-color);
 }
-
 
 .create-text {
   display: inline; 
@@ -166,27 +165,7 @@ header h1 {
   box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  .rive-text-content, .links {
-    width: 100%;
-  }
-
-  .rive-main-title, .links h2 {
-    text-align: left !important;
-    width: 100%;
-  }
-
-  .rive-bullet-wrapper {
-    margin: 0 0 0.5rem 0 !important; 
-    text-align: left !important; 
-    width: 100%;
-  }
-  .rive-bullet-wrapper li {
-    margin: 0; 
-    float: none;
-  }
-}
-
+/* --- LINKS SECTION STYLES (Used for Hackintosh and Motion Graphics) --- */
 .links {
   margin-top: var(--spacing-unit);
 }
@@ -207,7 +186,6 @@ header h1 {
 
 .links li {
   list-style: none !important; 
-  margin-left: 1.5rem; 
   padding: 0;
   margin-bottom: 0.8rem;
   line-height: 1.4;
@@ -245,6 +223,27 @@ header h1 {
 .links a:hover {
   color: var(--link-hover-color);
 }
+
+@media (max-width: 600px) {
+  .rive-text-content, .links {
+    width: 100%;
+  }
+
+  .rive-main-title, .links h2 {
+    text-align: left !important;
+    width: 100%;
+  }
+
+  .rive-bullet-wrapper {
+    margin: 0 0 0.5rem 0 !important; 
+    text-align: left !important; 
+    width: 100%;
+  }
+  .rive-bullet-wrapper li {
+    margin: 0; 
+    float: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -279,8 +278,57 @@ header h1 {
         <canvas id="rive-canvas"></canvas>
       </div>
     </div>
-    
   </div>
+
+  <div class="links">
+    <h2>motion graphics</h2>
+    <ul>
+      <li>
+        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span class="link-text-wrapper">
+          <a href="https://www.facebook.com/share/v/1DaxfJtjxp/?mibextid=wwXIfr" target="_blank">
+            rtle 2024
+          </a>
+        </span>
+      </li>
+
+      <li>
+        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span class="link-text-wrapper">
+          <a href="https://www.facebook.com/share/v/19vew3WzAB/?mibextid=wwXIfr" target="_blank">
+            swu radtech throwback
+          </a>
+        </span>
+      </li>
+
+      <li>
+        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span class="link-text-wrapper">
+          <a href="https://www.facebook.com/share/v/1DKPSCHJSy/?mibextid=wwXIfr" target="_blank">
+            squid game inspired meme
+          </a>
+        </span>
+      </li>
+
+      <li>
+        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span class="link-text-wrapper">
+          <a href="https://www.facebook.com/share/v/1Yp1v3f4k2/?mibextid=wwXIfr" target="_blank">
+            harry potter inspired intro
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+
   <div class="links">
     <h2>hackintosh related stuff</h2>
     <ul>

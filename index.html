@@ -1,406 +1,312 @@
 <!DOCTYPE html>
+
+<!-- yes this is vibe-coded -->
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>samuelnotfound</title>
-
+<title>sam</title>
 <script src="https://unpkg.com/@rive-app/webgl2"></script>
 
 <style>
 :root {
-  --main-font-size: 0.85rem;
-  --spacing-unit: 1.5rem; 
-  --link-color: #0000EE;
-  --link-hover-color: #551A8B;
-  --background-color: #FFFFFF;
+  --blue: #0078d7;
+  --white: #ffffff;
+  --white-dim: rgba(255,255,255,0.55);
+  --white-faint: rgba(255,255,255,0.12);
+  --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: #000000;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  line-height: 1.5;
-  font-size: var(--main-font-size);
-  background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(0,0,0,0.01) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: var(--font);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: var(--spacing-unit);
-  box-sizing: border-box;
+.page {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 4rem;
+  padding: 12vh 12vw 5rem 12vw; 
+  align-items: start;
 }
 
-header h1 {
-  margin: 0 0 0.5rem 0;
-  font-size: var(--main-font-size);
+.left { min-width: 0; }
+
+.sad-face {
+  font-size: clamp(5rem, 13vw, 8.5rem);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.01em;
+  display: block;
+  min-height: 1.1em;
 }
 
-.intro {
-  margin: 0;
-  margin-bottom: var(--spacing-unit);
-}
-.intro p {
-  margin: 0;
+.sad-face::after {
+  content: ":(";
+  animation: glitchFace 4s steps(1) infinite;
 }
 
-.rive-text-content {
-  min-width: unset;
+@keyframes glitchFace {
+  0%   { content: ":("; }
+  14%  { content: ":)"; }
+  28%  { content: ":|"; }
+  42%  { content: ":/"; }
+  56%  { content: "xD"; }
+  70%  { content: ":o"; }
+  84%  { content: ";)"; }
+  100% { content: ":("; }
 }
 
-.rive-main-title {
-    font-weight: bold;
-    margin: 0 0 0.5rem 0;
-    font-size: var(--main-font-size);
-    text-transform: lowercase !important; 
-    text-align: left !important;
+.tagline {
+  font-size: clamp(0.88rem, 1.6vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 520px;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 4rem;
 }
 
-/* Rive Button Styling (Kept original list item style) */
-.rive-bullet-wrapper {
+.section {
+  margin-bottom: 3.5rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--white-dim);
+  margin-bottom: 1.5rem;
+}
+
+.link-list {
   list-style: none;
-  padding: 0;
-  margin: 0 0 0.5rem 0 !important;
-  text-align: left !important; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.rive-bullet-wrapper li {
-  padding: 0.1rem 0.5rem; 
-  line-height: 1.4;
-  cursor: pointer;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: baseline; 
-  gap: 0.5rem; 
-  
-  color: var(--link-color);
-  text-transform: none; 
-  font-size: var(--main-font-size);
-  text-decoration: none;
-
-  background-color: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+.item-row {
+  font-size: 0.88rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
 }
 
-.rive-bullet-wrapper li b {
-    color: #000000; 
-    font-weight: bold;
+.link-num {
+  font-size: 0.68rem;
+  color: var(--white-dim);
+  flex-shrink: 0;
+  min-width: 2.5rem;
 }
 
-.rive-bullet-wrapper li:hover,
-.rive-bullet-wrapper li:not(.is-active):hover {
-    background-color: rgba(85, 26, 139, 0.05);
-    border-color: var(--link-hover-color);
-    color: var(--link-hover-color);
+.item-row a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,0.4);
+  transition: text-decoration-color 0.18s;
 }
 
-.rive-bullet-wrapper li.is-active {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-color: #000000; 
-    color: #000000; 
-}
-.rive-bullet-wrapper li.is-active b {
-    color: var(--link-hover-color);
-}
-
-.rive-arrow-icon {
-  width: 0.8em; 
-  height: 0.8em;
-  transition: transform 0.2s ease-out;
-  transform: rotate(0deg); 
-  stroke: var(--link-color);
-  margin-top: 0.15em; 
-}
-
-.rive-bullet-wrapper li.is-active .rive-arrow-icon {
-  transform: rotate(180deg); 
-  stroke: var(--link-hover-color);
-}
-.rive-bullet-wrapper li:not(.is-active) .rive-arrow-icon {
-    transform: rotate(0deg); 
-    stroke: var(--link-color);
-}
-.rive-bullet-wrapper li:hover .rive-arrow-icon {
-    stroke: var(--link-hover-color);
-}
-
-.create-text {
-  display: inline; 
-}
-
-.rive-canvas-collapsible {
-    max-height: 0; 
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-}
-
-.rive-canvas-collapsible.is-active {
-    max-height: 500px;
-    padding-top: 1rem;
+.item-row a:hover {
+  text-decoration-color: var(--white);
 }
 
 .canvas-wrapper {
-  max-width: 300px;
-  min-width: 250px; 
-  height: 40vh;
-  border: 1px dashed #B0B0B0;
-  background-color: #F7F7F7; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  width: 100%;
+  height: 320px;
+  margin-top: 1.5rem;
+  border: none; 
+  position: relative;
+  background-color: var(--white);
+  border-radius: 2px;
 }
 
 #rive-canvas {
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.disclaimer {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--white-dim);
+  max-width: 480px;
+  padding-left: 3.5rem;
+}
+
+.rive-toggle {
+  background: none;
   border: none;
-  box-sizing: border-box;
-}
-
-/* --- LINKS SECTION STYLES (Used for Hackintosh and Motion Graphics) --- */
-.links {
-  margin-top: var(--spacing-unit);
-}
-
-.links h2 {
-  font-weight: bold;
-  margin: 0 0 0.5rem 0;
-  font-size: var(--main-font-size);
-  text-transform: lowercase !important; 
-  text-align: left !important;
-}
-
-.links ul {
-  list-style: none !important; 
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 0.88rem;
+  cursor: pointer;
   padding: 0;
-  margin: 0.5rem 0 0 0;
-}
-
-.links li {
-  list-style: none !important; 
-  padding: 0;
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
-  display: flex; 
-  align-items: flex-start;
-  gap: 0.5rem; 
-}
-
-.links li::before {
-    content: none !important;
-    padding-left: 0 !important;
-}
-
-.links li .link-arrow-icon {
-    width: 0.7em;
-    height: 0.7em;
-    min-width: 0.7em; 
-    stroke-width: 3; 
-    margin-top: 0.1em;
-    stroke: #000000;
-}
-
-.link-text-wrapper {
-    flex-grow: 1; 
-    display: block; 
-    line-height: 1.4;
-}
-
-.links a {
-  font-weight: bold;
   text-decoration: underline;
-  color: var(--link-color);
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.links a:hover {
-  color: var(--link-hover-color);
+.toggle-arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .rive-text-content, .links {
-    width: 100%;
-  }
+.rive-toggle[aria-expanded="false"] .toggle-arrow {
+  transform: rotate(-90deg);
+}
 
-  .rive-main-title, .links h2 {
-    text-align: left !important;
-    width: 100%;
-  }
+.rive-collapsible {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.38s ease, opacity 0.3s ease;
+}
 
-  .rive-bullet-wrapper {
-    margin: 0 0 0.5rem 0 !important; 
-    text-align: left !important; 
-    width: 100%;
-  }
-  .rive-bullet-wrapper li {
-    margin: 0; 
-    float: none;
-  }
+.rive-collapsible.is-collapsed {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+.rive-collapsible-inner { overflow: hidden; }
+
+@media (max-width: 850px) {
+  .page { grid-template-columns: 1fr; padding: 8vh 8vw; gap: 3rem; }
+  .disclaimer { padding-left: 0; }
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <header>
-    <h1>hey there, i'm sam!</h1>
-  </header>
+<div class="page">
+  <div class="left">
+    <div class="sad-face"></div>
+    <p class="tagline">i'm a radiologic technology student-intern with interest in interactive motion design and computer science.</p>
 
-  <div class="intro">
-    <p>i'm a radiologic technology student-intern with interest in interactive motion design and computer science.</p>
-  </div>
-
-  <div class="rive-section-container">
-    <div class="rive-text-content">
-      <div class="rive-main-title">interactive animations</div>
-      
-      <ul class="rive-bullet-wrapper">
-        <li id="rive-toggle-button" class="is-active">
-          <svg class="rive-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- RIVE SECTION -->
+    <div class="section">
+      <div class="section-label">interactive animations</div>
+      <div class="item-row">
+        <span class="link-num">01 —</span>
+        <button class="rive-toggle" id="rive-toggle" aria-expanded="true" aria-controls="rive-collapsible">
+          <svg class="toggle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-          <span class="create-text">
-            <b>rive</b>: interactive radtech skeleton
-          </span>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="rive-canvas-collapsible is-active" id="rive-collapsible-content">
-      <div class="canvas-wrapper">
-        <canvas id="rive-canvas"></canvas>
+          rive: interactive radtech skeleton
+        </button>
+      </div>
+
+      <div class="rive-collapsible" id="rive-collapsible">
+        <div class="rive-collapsible-inner">
+          <p class="disclaimer">
+            probably going to be my last rive animation since rive placed the export feature behind a subscription.
+            <br><br>
+            touch scrolling is disabled within the white box to prioritize character interaction. please swipe outside the box to scroll.
+          </p>
+          <div class="canvas-wrapper">
+            <canvas id="rive-canvas"></canvas>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="section">
+      <div class="section-label">motion graphics</div>
+      <ul class="link-list">
+        <li class="item-row">
+          <span class="link-num">01 —</span>
+          <a href="https://www.facebook.com/share/v/1DaxfJtjxp/" target="_blank"><b>2024</b> RTLE send off</a>
+        </li>
+        <li class="item-row">
+          <span class="link-num">02 —</span>
+          <a href="https://www.facebook.com/share/v/19vew3WzAB/" target="_blank"><b>2024</b> SWU RadTech throwback</a>
+        </li>
+        <li class="item-row">
+          <span class="link-num">03 —</span>
+          <a href="https://www.facebook.com/share/v/1DKPSCHJSy/?mibextid=wwXIfr" target="_blank">squid game inspired meme</a>
+        </li>
+        <li class="item-row">
+          <span class="link-num">04 —</span>
+          <a href="https://www.facebook.com/share/v/1Yp1v3f4k2/?mibextid=wwXIfr" target="_blank">harry potter inspired intro</a>
+        </li>
+      </ul>
+      <p class="disclaimer">
+        motion design projects i made back when i was a creatives committee on my college's student body organization.
+      </p>
+    </div>
+
+    <!-- HACKINTOSH SECTION -->
+    <div class="section">
+      <div class="section-label">hackintosh projects</div>
+      <ul class="link-list">
+        <li class="item-row">
+          <span class="link-num">01 —</span>
+          <span>improved <a href="https://github.com/5T33Z0/OC-Little-Translated/blob/main/Content/03_USB_Fixes/ACPI_Mapping_USB_Ports/XHUB_Method/README.md" target="_blank">ACPI USB mapping guide</a> based on my <a href="https://github.com/samuelnotfound/miscellaneous-hackintosh-guides/blob/main/SSDT_USB_Mapping/README.md" target="_blank">original guide</a></span>
+        </li>
+        <li class="item-row">
+          <span class="link-num">02 —</span>
+          <span><a href="https://github.com/samuelnotfound/E1-572G-Hackintosh" target="_blank">hackintosh config</a> for Acer Aspire E1-572G (archived)</span>
+        </li>
+        <li class="item-row">
+          <span class="link-num">03 —</span>
+          <span><a href="https://github.com/samuelnotfound/miscellaneous-hackintosh-guides" target="_blank">miscellaneous hackintosh guides</a> (archived)</span>
+        </li>
+      </ul>
+      <p class="disclaimer">
+        things i did back when i was so interested with building, and learning the inner workings of hackintosh.
+      </p>
+    </div>
+
   </div>
 
-  <div class="links">
-    <h2>motion graphics</h2>
-    <ul>
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          <a href="https://www.facebook.com/share/v/1DaxfJtjxp/?mibextid=wwXIfr" target="_blank">
-            rtle 2024
-          </a>
-        </span>
-      </li>
-
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          <a href="https://www.facebook.com/share/v/19vew3WzAB/?mibextid=wwXIfr" target="_blank">
-            swu radtech throwback
-          </a>
-        </span>
-      </li>
-
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          <a href="https://www.facebook.com/share/v/1DKPSCHJSy/?mibextid=wwXIfr" target="_blank">
-            squid game inspired meme
-          </a>
-        </span>
-      </li>
-
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          <a href="https://www.facebook.com/share/v/1Yp1v3f4k2/?mibextid=wwXIfr" target="_blank">
-            harry potter inspired intro
-          </a>
-        </span>
-      </li>
-    </ul>
-  </div>
-
-  <div class="links">
-    <h2>hackintosh related stuff</h2>
-    <ul>
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          improved
-          <a href="https://github.com/5T33Z0/OC-Little-Translated/blob/main/Content/03_USB_Fixes/ACPI_Mapping_USB_Ports/XHUB_Method/README.md" target="_blank">
-            ACPI USB Mapping Guide
-          </a>
-          based on my
-          <a href="https://github.com/samuelnotfound/miscellaneous-hackintosh-guides/blob/main/SSDT_USB_Mapping/README.md" target="_blank">
-            original guide
-          </a>
-        </span>
-      </li>
-
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          <a href="https://github.com/samuelnotfound/E1-572G-Hackintosh" target="_blank">
-            hackintosh config
-          </a> for Acer Aspire E1-572G (archived)
-        </span>
-      </li>
-
-      <li>
-        <svg class="link-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-        <span class="link-text-wrapper">
-          <a href="https://github.com/samuelnotfound/miscellaneous-hackintosh-guides" target="_blank">
-            miscellaneous hackintosh guides
-          </a> (archived)
-        </span>
-      </li>
-    </ul>
-  </div>
+  <div class="right"></div>
 </div>
 
 <script>
 const canvas = document.getElementById("rive-canvas");
+let riveInstance = null;
 
-const riveAnimation = new rive.Rive({
-  src: "https://raw.githubusercontent.com/samuelnotfound/rive-skeleton/main/skeleton.riv",
-  canvas: canvas,
-  stateMachines: "State Machine 1",
-  artboard: "Artboard",
-  autoplay: true,
-  interactive: true
-});
+try {
+  riveInstance = new rive.Rive({
+    src: "https://raw.githubusercontent.com/samuelnotfound/rive-skeleton/main/skeleton2.riv",
+    canvas: canvas,
+    stateMachines: "State Machine 1",
+    artboard: "Artboard",
+    autoplay: true,
+    onLoad: () => riveInstance.resizeDrawingSurfaceToCanvas(),
+  });
+} catch(e) { console.warn(e); }
 
-function resizeCanvas() {
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  riveAnimation.resizeDrawingSurfaceToCanvas();
+function resizeRive() {
+  if (riveInstance && canvas.clientWidth > 0)
+    riveInstance.resizeDrawingSurfaceToCanvas();
 }
 
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
+window.addEventListener("resize", resizeRive);
 
+const toggleBtn = document.getElementById("rive-toggle");
+const collapsible = document.getElementById("rive-collapsible");
 
-const toggleButton = document.getElementById("rive-toggle-button");
-const collapsibleContent = document.getElementById("rive-collapsible-content");
-
-toggleButton.addEventListener('click', function() {
-    toggleButton.classList.toggle('is-active');
-    collapsibleContent.classList.toggle('is-active');
+toggleBtn.addEventListener("click", () => {
+  const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+  toggleBtn.setAttribute("aria-expanded", String(!expanded));
+  collapsible.classList.toggle("is-collapsed", expanded);
+  if (!expanded) collapsible.addEventListener("transitionend", resizeRive, { once: true });
 });
 </script>
 

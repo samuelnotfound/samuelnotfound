@@ -1,9 +1,12 @@
+open-source enthusiast interested in self-hosting, interactive animations, and experimenting with software.
 
-open-source enthusiast with current interest in self-hosting, and interactive animations.
+### projects
 
-- **rive:** [interactive radtech skeleton](https://samuelnotfound.github.io/rive-skeleton/) <br>
+- [drive preview exporter](https://github.com/samuelnotfound/Drive-Preview-Exporter) — a chrome extension for exporting pdf and video previews from google drive.
+- [rive skeleton](https://samuelnotfound.github.io/rive-skeleton/) — an interactive animation made with rive.
 
-some hackintosh related stuff:
-- [ACPI USB Mapping Guide](https://github.com/5T33Z0/OC-Little-Translated/blob/main/Content/03_USB_Fixes/ACPI_Mapping_USB_Ports/XHUB_Method/README.md)
-- [hackintosh config](https://github.com/samuelnotfound/E1-572G-Hackintosh) for Acer Aspire E1-562G
-- [other hackintosh stuff](https://github.com/samuelnotfound/miscellaneous-hackintosh-guides) 
+### hackintosh
+
+- [acpi usb mapping guide](https://github.com/5T33Z0/OC-Little-Translated/blob/main/Content/03_USB_Fixes/ACPI_Mapping_USB_Ports/XHUB_Method/README.md)
+- [acer aspire e1-572g hackintosh](https://github.com/samuelnotfound/E1-572G-Hackintosh)
+- [some hackintosh guides](https://github.com/samuelnotfound/miscellaneous-hackintosh-guides)

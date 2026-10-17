@@ -1,4 +1,4 @@
-[radiologic technology](https://www.google.com/search?q=bachelor+of+science+in+radiologic+technology) graduate, open-source enthusiast interested in self-hosting, interactive animations, and experimenting with software.
+[radiologic technology](https://www.google.com/search?q=bachelor+of+science+in+radiologic+technology) graduate, open-source enthusiast interested in self-hosting, creating interactive animations, and experimenting with software.
 
 ### projects
 

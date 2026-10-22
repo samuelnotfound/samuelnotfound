@@ -1,9 +1,9 @@
-[radiologic technology](https://www.google.com/search?q=bachelor+of+science+in+radiologic+technology) graduate, open-source enthusiast interested in self-hosting, creating interactive animations, and experimenting with software.
+open-source enthusiast interested in self-hosting, creating interactive animations, and experimenting with software.
 
 ### projects
 
 - [drive preview exporter](https://github.com/samuelnotfound/Drive-Preview-Exporter) — a chrome extension for exporting pdf and video previews from google drive.
-- [rive skeleton](https://samuelnotfound.github.io/rive-skeleton/) — an interactive animation made with rive.
+- [rive radtech skeleton](https://samuelnotfound.github.io/rive-skeleton/) — an interactive animation made with rive.
 
 ### hackintosh
 

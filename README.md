@@ -7,6 +7,5 @@ open-source enthusiast interested in self-hosting, creating interactive animatio
 
 ### hackintosh
 
-- [acpi usb mapping guide](https://github.com/5T33Z0/OC-Little-Translated/blob/main/Content/03_USB_Fixes/ACPI_Mapping_USB_Ports/XHUB_Method/README.md)
 - [acer aspire e1-572g hackintosh](https://github.com/samuelnotfound/E1-572G-Hackintosh)
 - [some hackintosh guides](https://github.com/samuelnotfound/miscellaneous-hackintosh-guides)

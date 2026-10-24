@@ -1,4 +1,4 @@
-open-source enthusiast interested in self-hosting, creating interactive animations, and experimenting with software.
+open-source enthusiast interested in self-hosting, creating motion graphics and interactive animations, and experimenting with software.
 
 ### projects
 

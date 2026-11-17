@@ -2,5 +2,5 @@ open-source enthusiast. into in self-hosting, creating motion graphics and inter
 
 ### projects
 
-- [drive preview exporter](https://github.com/samuelnotfound/Drive-Preview-Exporter) — a chrome extension for exporting rendered preview of protected pdf and video files from google drive.
+- [drive preview exporter](https://github.com/samuelnotfound/Drive-Preview-Exporter) — a chrome extension for exporting rendered previews of protected pdf and video files from google drive.
 - [rive radtech skeleton](https://samuelnotfound.github.io/rive-skeleton/) — an interactive animation made with rive.

@@ -1,4 +1,4 @@
-open-source enthusiast. i’m into self-hosting, building hackintoshes, creating motion graphics and interactive animations, and experimenting with software.
+open-source enthusiast. i’m into self-hosting, building hackintosh, creating motion graphics and interactive animations, and experimenting with software.
 
 ### projects
 
